@@ -11,11 +11,11 @@ import java.util.Scanner;
  */
 public class Q12 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter first base value : ");
-		Integer first = input.nextInt();
+		Integer first = scanner.nextInt();
 		System.out.print("Enter last base value : ");
-		Integer last = input.nextInt();
+		Integer last = scanner.nextInt();
 
 		for (int i = 1; i <= 25; i++) {
 			for (int j = first; j <= last; j++) {
