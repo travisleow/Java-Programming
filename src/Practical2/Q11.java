@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class Q11 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int credit = 0;
-        int totalCredits = 0;
-        double gpa = 0.0;
-        int counter = 0;
-        int gradePoints = 0;
+        double credit = 0;
+        double totalCredits = 0;
+        double gpa = 0;
+        double counter = 0;
+        double gradePoints = 0;
         while(true) {
             counter++;
             System.out.print("Enter grade for module #" + counter + " (or enter 0 to stop) : ");
@@ -25,7 +25,7 @@ public class Q11 {
             System.out.print("Enter credit units for module #" + counter + " : ");
             credit = scanner.nextInt();
             totalCredits += credit;
-            switch(grade) {
+            switch (grade.toUpperCase()) {
                 case("A"): gradePoints += 4 * credit; break;
                 case("B"): gradePoints += 3 * credit; break;
                 case("C"): gradePoints += 2 * credit; break;

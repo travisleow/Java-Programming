@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Practical2;
+
 import java.util.Scanner;
 
 /**
@@ -10,28 +11,36 @@ import java.util.Scanner;
  * @author Admin
  */
 public class Q5 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double sum = 0.0;
-        double average = 0.0;
         int counter = 0;
-        
-        for (int i = 1; i < 6; i++) {
+        double totalScore = 0;
+        double average = 0;
+        String grade = "";
+        for (int i = 0;; i++) {
             System.out.print("Enter score# " + i + " (or enter -1 to stop) : ");
-        double score = scanner.nextInt();
-        if (score == -1) {
-            sum += score;
-            break;
+            Double score = scanner.nextDouble();
+
+            if (score == -1) {
+                average = totalScore / i;
+                break;
+            }
+            totalScore += score;
+        }
+
+        if (average >= 80) {
+            grade = "A";
+        } else if (average >= 70) {
+            grade = "B";
+        } else if (average >= 60) {
+            grade = "C";
+        } else if (average >= 50) {
+            grade = "D";
         } else {
-            counter++;
-            sum += score;
+            grade = "F";
         }
-        
-        }
-        average = sum / counter;
-        System.out.println(sum + average);
-        
-        
-        
+        System.out.println("Average Scores = " + String.format("%.2f", average) + " Grade = " + grade);
+
     }
 }
