@@ -26,7 +26,7 @@ public class Q8 {
         System.out.println("Total Seconds: " + seconds);
         System.out.println("Hours:         " + convert[0]);
         System.out.println("Minutes:       " + convert[1]);
-        System.out.println("seconds:       " + convert[2]);
+        System.out.println("Seconds:       " + convert[2]);
     }
             
             
