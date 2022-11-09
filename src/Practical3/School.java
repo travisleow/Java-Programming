@@ -37,6 +37,14 @@ public class School {
 // (3) If the number is 2,
 //add a lecturer object to the persons array.
 //You will need to call createLecturer() method.
+        for (int i = 0; i < 2; i++) {
+            int num = (int)(Math.random() * 2) + 1;
+            if (num == 1) {
+                createStudent();
+            } else {
+                createLecturer();
+            }
+        }
     }
 
     public void createStudent() {
@@ -50,8 +58,10 @@ public class School {
                 "Enter year of Study:",
                 "School - Create Student",
                 JOptionPane.QUESTION_MESSAGE);
+        char yr = inStr.charAt(0);
 //Create a Student object based on the values entered
 // and store the object in the persons array
+        persons.push(new Student(name, yr));
     }
 
     public void createLecturer() {
@@ -63,6 +73,28 @@ public class School {
 // times.
 // It then creates a Lecturer object and
 // stores in the persons array
+
+        int numModules = Integer.parseInt(JOptionPane.showInputDialog(
+                null,
+                "Enter number of modules",
+                "School - Enter modules",
+                JOptionPane.QUESTION_MESSAGE));
+        
+        String[] modules = new String[numModules];
+        
+        for (int i = 0; i < numModules; i++) {
+            System.out.println("Enter module #" + i + " : ");
+            String moduleCode = JOptionPane.showInputDialog(
+                null,
+                "Enter module code #" + i,
+                "School - Enter module codes",
+                JOptionPane.QUESTION_MESSAGE);
+            modules[i] = moduleCode;
+        }
+        
+
+        
+        
     }
 
     public void displayPopulation() {
