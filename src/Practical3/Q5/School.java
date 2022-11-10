@@ -1,6 +1,5 @@
 package Practical3.Q5;
 
-import Practical3.Q5.Student;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,15 +40,16 @@ public class School {
         persons = new Person[size];
         for (int i = 0; i < size; i++) {
             int num = (int) (Math.random() * 2) + 1;
+            numOfPeople = i;
             if (num == 1) {
-                persons[i] = createStudent();
+                createStudent();
             } else {
-                persons[i] = createLecturer();
+                createLecturer();
             }
         }
     }
 
-    public Student createStudent() {
+    public void createStudent() {
         String name = JOptionPane.showInputDialog(
                 null,
                 "Enter Name:",
@@ -63,10 +63,10 @@ public class School {
         char yr = inStr.charAt(0);
 //Create a Student object based on the values entered
 // and store the object in the persons array
-        return new Student(name, yr);
+        persons[numOfPeople] = new Student(name, yr);
     }
 
-    public Lecturer createLecturer() {
+    public void createLecturer() {
 // Write the code needed to create a lecturer object.
 // It will prompts the user to enter the no. of modules
 // and the module code(s) that the lecturer is teaching.
@@ -98,9 +98,8 @@ public class School {
             modules[i - 1] = moduleCode;
         }
 
-        return new Lecturer(name, modules);
-        
-        
+        persons[numOfPeople] = new Lecturer(name, modules);
+  
     }
 
     public void displayPopulation() {
