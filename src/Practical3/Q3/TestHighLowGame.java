@@ -11,7 +11,6 @@ public class TestHighLowGame {
         HighLowGame game = new HighLowGame();
         JOptionPane.showMessageDialog(null, "Welcome to the High Low Number Game!");
         game.generateRandomNumber();
-        String result;
         System.out.println(game.randomNumber);
         do {
             game.getUserInput();
