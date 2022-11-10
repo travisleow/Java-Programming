@@ -1,7 +1,5 @@
 package Practical3.Q4;
 
-import Practical3.Q4.Lecturer;
-
 /**
  *
  * @author travi

@@ -8,27 +8,29 @@ import javax.swing.JOptionPane;
 
 public class HighLowGame {
     int randomNumber, guess;
+    String msg;
 
-    public static int generateRandomNumber() {
-        return (int)(Math.random() * 100);
+    public void generateRandomNumber() {
+        randomNumber = (int)(Math.random() * 100);
     }
 
-    public static int getUserInput() {
-        return Integer.parseInt(JOptionPane.showInputDialog("Enter your guess"));
+    public void getUserInput() {
+        guess = Integer.parseInt(JOptionPane.showInputDialog("Enter your guess"));
     }
 
-    public static String getResult(int guess, int generatedNum) {
-        if (guess > generatedNum) {
-            return guess + " is higher than the Magic Number";
-        } else if (guess < generatedNum) {
-            return guess + " is lower than the Magic Number";
+    public String getResult() {
+        if (guess > randomNumber) {
+            msg = guess + " is higher than the Magic Number";
+        } else if (guess < randomNumber) {
+            msg = guess + " is lower than the Magic Number";
         } else {
-            return "You are right!";
+            msg = "You are right!";
         }
+        return msg;
     }
 
-    public static boolean gameEnded(String result) {
-        return !(result.equals("You are right!"));
+    public boolean gameEnded() {
+        return !(msg.equals("You are right!"));
     }
 
 }

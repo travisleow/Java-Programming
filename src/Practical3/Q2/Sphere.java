@@ -10,7 +10,7 @@ package Practical3.Q2;
  * @author travi
  */
 public class Sphere {
-    double radius;
+    private double radius;
     
     public Sphere() {
         radius = 0.0;
