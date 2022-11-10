@@ -37,17 +37,18 @@ public class School {
 // (3) If the number is 2,
 //add a lecturer object to the persons array.
 //You will need to call createLecturer() method.
-        for (int i = 0; i < 2; i++) {
-            int num = (int)(Math.random() * 2) + 1;
+        persons = new Person[size];
+        for (int i = 0; i < size; i++) {
+            int num = (int) (Math.random() * 2) + 1;
             if (num == 1) {
-                createStudent();
+                persons[i] = createStudent();
             } else {
-                createLecturer();
+                persons[i] = createLecturer();
             }
         }
     }
 
-    public void createStudent() {
+    public Student createStudent() {
         String name = JOptionPane.showInputDialog(
                 null,
                 "Enter Name:",
@@ -61,10 +62,10 @@ public class School {
         char yr = inStr.charAt(0);
 //Create a Student object based on the values entered
 // and store the object in the persons array
-        persons.push(new Student(name, yr));
+        return new Student(name, yr);
     }
 
-    public void createLecturer() {
+    public LecturerQ5 createLecturer() {
 // Write the code needed to create a lecturer object.
 // It will prompts the user to enter the no. of modules
 // and the module code(s) that the lecturer is teaching.
@@ -73,26 +74,30 @@ public class School {
 // times.
 // It then creates a Lecturer object and
 // stores in the persons array
+        String name = JOptionPane.showInputDialog(
+                null,
+                "Enter Name:",
+                "School - Create Lecturer",
+                JOptionPane.QUESTION_MESSAGE);
 
         int numModules = Integer.parseInt(JOptionPane.showInputDialog(
                 null,
                 "Enter number of modules",
                 "School - Enter modules",
                 JOptionPane.QUESTION_MESSAGE));
-        
-        String[] modules = new String[numModules];
-        
-        for (int i = 0; i < numModules; i++) {
-            System.out.println("Enter module #" + i + " : ");
-            String moduleCode = JOptionPane.showInputDialog(
-                null,
-                "Enter module code #" + i,
-                "School - Enter module codes",
-                JOptionPane.QUESTION_MESSAGE);
-            modules[i] = moduleCode;
-        }
-        
 
+        String[] modules = new String[numModules];
+
+        for (int i = 1; i <= numModules; i++) {
+            String moduleCode = JOptionPane.showInputDialog(
+                    null,
+                    "Enter module code #" + i,
+                    "School - Enter module codes",
+                    JOptionPane.QUESTION_MESSAGE);
+            modules[i - 1] = moduleCode;
+        }
+
+        return new LecturerQ5(name, modules);
         
         
     }
@@ -102,6 +107,11 @@ public class School {
         // each person in the school.
 // It uses the introduce() method in each class
 // to achieve this.
+        for (int i = 1; i <= persons.length; i++) {
+            System.out.println("Person " + i + ":");
+            persons[i - 1].introduce();
+            System.out.println("");
+        }
     }
 
     public static void main(String[] args) {

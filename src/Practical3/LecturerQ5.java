@@ -28,7 +28,7 @@ public class LecturerQ5 extends Person{
         super.introduce();
         System.out.println("I am a lecturer for the following subjects:");
         for (int i = 0; i < modules.length; i++) {
-            System.out.println(i++ + ". " + modules[i]);
+            System.out.println(i+1 + ". " + modules[i]);
         }
     }
 }
