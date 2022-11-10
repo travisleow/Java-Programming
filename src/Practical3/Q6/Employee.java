@@ -4,7 +4,7 @@ package Practical3.Q6;
  *
  * @author travi
  */
-public class Employee {
+public abstract class Employee {
     String name;
     double baseSalary;
     
@@ -21,7 +21,5 @@ public class Employee {
         return this.baseSalary;
     }
     
-    public double calcSalary() {
-        return 0.0;
-    }
+    public abstract double calcSalary();
 }
