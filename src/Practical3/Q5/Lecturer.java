@@ -1,17 +1,17 @@
-package Practical3;
+package Practical3.Q5;
 
 /**
  *
  * @author travi
  */
-public class LecturerQ5 extends Person{
+public class Lecturer extends Person{
     String[] modules;
     
-    public LecturerQ5() {
+    public Lecturer() {
         modules = null;
     }
     
-    public LecturerQ5(String aName, String[] aModules) {
+    public Lecturer(String aName, String[] aModules) {
         super(aName);
         modules = aModules;
     }

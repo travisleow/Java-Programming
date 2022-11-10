@@ -1,9 +1,10 @@
-package Practical3;
+package Practical3.Q3;
 
 /**
  *
  * @author travi
  */
+import Practical3.Q3.HighLowGame;
 import javax.swing.JOptionPane;
 
 public class TestHighLowGame {

@@ -1,10 +1,10 @@
-package Practical3;
+package Practical3.Q4;
 
 /**
  *
  * @author travi
  */
-public class Lecturer {
+public abstract class Lecturer {
     String name;
     int staffID;
     

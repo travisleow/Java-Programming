@@ -1,5 +1,6 @@
-package Practical3;
+package Practical3.Q5;
 
+import Practical3.Q5.Student;
 import javax.swing.JOptionPane;
 
 /**
@@ -65,7 +66,7 @@ public class School {
         return new Student(name, yr);
     }
 
-    public LecturerQ5 createLecturer() {
+    public Lecturer createLecturer() {
 // Write the code needed to create a lecturer object.
 // It will prompts the user to enter the no. of modules
 // and the module code(s) that the lecturer is teaching.
@@ -97,7 +98,7 @@ public class School {
             modules[i - 1] = moduleCode;
         }
 
-        return new LecturerQ5(name, modules);
+        return new Lecturer(name, modules);
         
         
     }

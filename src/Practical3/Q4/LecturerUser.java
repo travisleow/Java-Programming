@@ -1,4 +1,8 @@
-package Practical3;
+package Practical3.Q4;
+
+import Practical3.Q4.PartTimeLecturer;
+import Practical3.Q4.FullTimeLecturer;
+import Practical3.Q4.Lecturer;
 
 /**
  *
