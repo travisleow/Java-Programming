@@ -28,6 +28,8 @@ public class TestException {
             System.out.println("Please input an integer.");
         } catch (ArithmeticException e) {
             System.out.println("Number cannot be divided by 0.");
+        } catch (Exception e) { 
+            System.out.print("Unknown Error");
         }
     }
 }
