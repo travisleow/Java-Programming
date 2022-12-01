@@ -14,7 +14,7 @@ public class TestException {
             System.out.print("Enter 1st Number : ");
             int a = Integer.parseInt(br.next());
             if (a < 0 || a > 2) {
-                throw new ArrayIndexOutOfBoundsException("1st number cannot be less than 0 and more than 2");
+                throw new ArrayIndexOutOfBoundsException();
             }
             System.out.println("1");
             System.out.print("Enter 2nd Number: ");
@@ -25,9 +25,11 @@ public class TestException {
             System.out.println("c = " + c);
             System.out.println(numbers[a]);
         } catch (NumberFormatException e) {
-            System.out.println("Please input an integer.");
+            System.out.println(e);
         } catch (ArithmeticException e) {
             System.out.println("Number cannot be divided by 0.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("1st number cannot be less than 0 and more than 2");
         } catch (Exception e) { 
             System.out.print("Unknown Error");
         }
