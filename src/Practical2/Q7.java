@@ -33,6 +33,6 @@ public class Q7 {
     }
     
     public static void showMsg(double height, double width, double[] measurements) {
-         JOptionPane.showMessageDialog(null, "Summary of Rectangle Measurements\nHeight : " + String.format("%.1f", height) + "\nWidth: " + String.format("%.1f", width) + "\nArea :" + String.format("%.1f", measurements[0]) + "\nPerimeter :" + String.format("%.1f", measurements[1]));
+         JOptionPane.showMessageDialog(null, String.format("Summary of Rectangle Measurements\nHeight: %.1f\n Width: %.1f\nArea: %.1f\nPerimeter: %.1f", height, width, measurements[0], measurements[1]));
     }
 }

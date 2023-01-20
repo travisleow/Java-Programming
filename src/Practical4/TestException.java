@@ -31,7 +31,7 @@ public class TestException {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("1st number cannot be less than 0 and more than 2");
         } catch (Exception e) { 
-            System.out.print("Unknown Error");
+            System.out.println("Unknown Error");
         }
     }
 }
