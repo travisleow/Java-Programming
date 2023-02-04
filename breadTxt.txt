@@ -1,0 +1,6 @@
+1.0
+Plain,1
+Wholemeal,1
+Raisin,1
+Banana,1
+Corn,1
